@@ -1,13 +1,31 @@
 import './App.css';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as yup from "yup";
-
+import Axios from "axios";
 
 function App() {
+  
+  const handleClickRegister = (values) => {
+    Axios.post("http://localhost:3001/register", {
+      email: values.email,
+      password: values.password,
+    })
+    .then((response) => {
+      console.log(response)
+    })
+  }
 
-  const handleClickLogin = (values) => console.log(values)
+  const handleClickLogin = (values) => {
+    Axios.post("http://localhost:3001/login", {
+      email: values.email,
+      password: values.password,
+    })
+    .then((response) => {
+      console.log(response)
+    })
+  }
 
-  const handleClickRegister = (values) => console.log(values)
+  
   
   const validationLogin = yup.object().shape({
     email: yup.string().email().required(),
