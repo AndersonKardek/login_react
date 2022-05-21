@@ -79,55 +79,55 @@ function App() {
     {/* // //////////////////////////////////////////////////////////////////////////////////////////// */}
     
     
-    <div className="container">
-      <h1>Cadastro</h1>
-      <Formik 
-        initialValues={{}} 
-        onSubmit={handleClickRegister}
-        validationSchema={validationRegister}
-      >
-        <Form className="register-form">
-          <div className="register-form-group">
-            <Field 
-              name="email" 
-              className="form-field" 
-              placeholder="Email" 
-            />
-            <ErrorMessage 
-              component="span"
-              name="email"
-              className="form-error"
-            />
-          </div>
-          <div className="form-group">
-            <Field 
-              name="password" 
-              className="form-field" 
-              placeholder="Senha" 
-            />
-            <ErrorMessage 
-              component="span"
-              name="password"
-              className="form-error"
-            />
-          </div>
-          <div className="form-group">
-            <Field 
-              name="confirmPassword" 
-              className="form-field" 
-              placeholder="Confirme sua senha" 
-            />
-            <ErrorMessage 
-              component="span"
-              name="confirmPassword"
-              className="form-error"
-            />
-          </div>
-          <button className="button" type="submit">Login</button>
-        </Form>
-      </Formik>
-    </div>
+    
+    <h1>Cadastro</h1>
+    <Formik 
+      initialValues={{}} 
+      onSubmit={handleClickRegister}
+      validationSchema={validationRegister}
+    >
+      <Form className="register-form">
+        <div className="register-form-group">
+          <Field 
+            name="email" 
+            className="form-field" 
+            placeholder="Email" 
+          />
+          <ErrorMessage 
+            component="span"
+            name="email"
+            className="form-error"
+          />
+        </div>
+        <div className="form-group">
+          <Field 
+            name="password" 
+            className="form-field" 
+            placeholder="Senha" 
+          />
+          <ErrorMessage 
+            component="span"
+            name="password"
+            className="form-error"
+          />
+        </div>
+        <div className="form-group">
+          <Field 
+            name="confirmPassword" 
+            className="form-field" 
+            placeholder="Confirme sua senha" 
+          />
+          <ErrorMessage 
+            component="span"
+            name="confirmPassword"
+            className="form-error"
+          />
+        </div>
+        <button className="button" type="submit">Login</button>
+      </Form>
+    </Formik>
   </div>
+
 
 
     
